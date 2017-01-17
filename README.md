@@ -33,7 +33,7 @@ $ npm test
 
 ## todo
 ```text
-- soasta like tools (or manage yourself)
+- soasta like tools (or manage yourself) user timing api?
 - backend and front-end test
 - travis-ci
 - env and config applier
@@ -57,5 +57,18 @@ $ npm test
 - auto bug reporting system with new topic
 - maybe amp (with progressive web app)
 - report topic and entry system
-- when i search a didnt exist topic when i am not logged-in -> empty page (bug)
+- when i search a did not exist topic when i am not logged-in -> empty page (bug)
+- reserved username ( check https://github.com/shouldbee/reserved-usernames )
+- auto scale
+- fix domain config with nginx
+- websocket port problem fix (maybe websocket balancer?)
+- notification for fatal problems (telegram, slack maybe?)
+- up vote, down vote button must be hidden if belong logged-in user (or visitor account).
+- /q/:thing links index problem?
+- check pagination for index cause its list box not a aHref?
+- cloud flare?
+- bug snag?
+- apply promises for whole async mechanic
+- remove fucking PageController or router functions
+- apply base view model for generic methods
 ```
