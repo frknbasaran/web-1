@@ -225,6 +225,7 @@ define(function (require, exports, module) {
       }
       new_uri += '//' + loc.host;
       return new_uri;
-    }
+    },
+    isPhantom: /PhantomJS/.test(window.navigator.userAgent)
   };
 });

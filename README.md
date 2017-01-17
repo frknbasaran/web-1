@@ -72,7 +72,6 @@ $ npm test
 - remove fucking PageController or router functions
 - apply base view model for generic methods
 - docker-ize :)
-- please add isPreRender like selector. cause we need add some PreRender headers into head
 - github hooks (do not remember!)
 - varnish
 - chat text area trick must be remove
