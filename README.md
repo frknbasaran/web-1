@@ -71,4 +71,26 @@ $ npm test
 - apply promises for whole async mechanic
 - remove fucking PageController or router functions
 - apply base view model for generic methods
+- docker-ize :)
+#
+# SORRY FOR SHITTY ENGLISH, HERE'S A POTATO
+#
+              .-"'"-.
+             |       |  
+           (`-._____.-')
+        ..  `-._____.-'  ..
+      .', :./'.== ==.`\.: ,`.
+     : (  :   ___ ___   :  ) ;
+     '._.:    |0| |0|    :._.'
+        /     `-'_`-'     \
+      _.|       / \       |._
+    .'.-|      (   )      |-.`.
+   //'  |  .-"`"`-'"`"-.  |  `\\ 
+  ||    |  `~":-...-:"~`  |    ||
+  ||     \.    `---'    ./     ||
+  ||       '-._     _.-'       ||
+ /  \       _/ `~:~` \_       /  \
+||||\)   .-'    / \    `-.   (/||||
+\|||    (`.___.')-(`.___.')    |||/
+ '"'     `-----'   `-----'     '"'
 ```
