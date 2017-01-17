@@ -68,11 +68,12 @@ $ npm test
 - check pagination for index cause its list box not a aHref?
 - cloud flare?
 - bug snag?
-- apply promises for whole async mechanic
+- apply promises for whole async mechanic (maybe proxies? but check supported browsers)
 - remove fucking PageController or router functions
 - apply base view model for generic methods
 - docker-ize :)
 - please add isPreRender like selector. cause we need add some PreRender headers into head
+- github hooks (do not remember!)
 #
 # SORRY FOR SHITTY ENGLISH, HERE'S A POTATO
 #
