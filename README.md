@@ -33,8 +33,8 @@ $ npm test
 
 ## todo
 ```text
-- soasta like tools (or manage yourself) user timing api?
-- backend and front-end test
+- soasta mpulse like tools (or manage yourself) user timing api?
+- tests and coverage
 - travis-ci
 - env and config applier
 - rework for views
@@ -74,6 +74,10 @@ $ npm test
 - docker-ize :)
 - please add isPreRender like selector. cause we need add some PreRender headers into head
 - github hooks (do not remember!)
+- varnish
+- chat text area trick must be remove
+- check fucking tab views (jquery ui?)
+- mobile browsers did not support user timing api
 #
 # SORRY FOR SHITTY ENGLISH, HERE'S A POTATO
 #
