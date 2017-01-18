@@ -13,6 +13,7 @@
     "favico.js": "0.3.10",
     "perfect-scrollbar": "0.6.12",
     "alertifyjs": "1.0.11",
-    "slug": "0.9.1"
+    "slug": "0.9.1",
+    "requirejs-plugins": "^1.0.3"
   }
 }
