@@ -77,6 +77,8 @@ $ npm test
 - chat text area trick must be remove
 - check fucking tab views (jquery ui?)
 - mobile browsers did not support user timing api
+- global error management
+- n3xt to async
 #
 # SORRY FOR SHITTY ENGLISH, HERE'S A POTATO
 #

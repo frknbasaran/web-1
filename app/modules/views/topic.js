@@ -57,7 +57,7 @@ define(function (require, exports, module) {
       this.currentPage = page ? parseInt(page) : 1;
       topicController.getTopicByIdAndPage(this.topicId, this.currentPage, (function (topic) {
         var json = topic.toJSON();
-        json.site = module.config().site;
+        json.site = location.origin;
         $(this.el).html(TopicTemplate(json));
 
         this.setTitleAndDescription(topic.get('title'));

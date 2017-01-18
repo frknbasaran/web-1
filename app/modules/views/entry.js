@@ -20,7 +20,7 @@ define(function (require, exports, module) {
     render: function (id) {
       entryController.getEntryById(id, (function (entry) {
         var json = entry.get('topic');
-        json.site = module.config().site;
+        json.site = location.origin;
         $(this.el).html(TopicTemplate(json));
         this.setTitleAndDescription(
           entry.get('topic').title + ' - #' + entry.get('id'),

@@ -59,12 +59,6 @@ require.config({
     'modules/controllers/topic': {
       topicLimit: 20
     },
-    'modules/views/topic': {
-      site: 'http://localhost:1337'
-    },
-    'modules/views/entry': {
-      site: 'http://localhost:1337'
-    },
     'utils': {
       defaultToken: '3LD4V41' // if u lucky, get your lucky!
     },
