@@ -79,6 +79,7 @@ $ npm test
 - mobile browsers did not support user timing api
 - global error management
 - n3xt to async
+- mail notification for unreal chat messages
 #
 # SORRY FOR SHITTY ENGLISH, HERE'S A POTATO
 #
