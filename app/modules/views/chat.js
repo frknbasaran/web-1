@@ -91,15 +91,13 @@ define(function (require, exports, module) {
 
           self.goBottomOfChat();
 
-          setTimeout(function () {
-            if (!socket.status) {
-              utils.doNoty('error', 'mesajlaşma servisi çıktı, not alıyım istersen?');
-            } else {
-              $('#message').prop('disabled', false);
-              $('#ok').prop('disabled', false);
-              cache.on('message_received', self.handleMessage.bind(self));
-            }
-          }, 3000);
+          if (!socket.status) {
+            utils.doNoty('error', 'mesajlaşma servisi çıktı, not alıyım istersen?');
+            $('#message').prop('disabled', true);
+            $('#ok').prop('disabled', true);
+          } else {
+            cache.on('message_received', self.handleMessage.bind(self));
+          }
         });
       });
     },

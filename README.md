@@ -41,7 +41,6 @@ $ npm test
 - rework for big js files (like app.js, router.js, utils.js, cache.js[eventBus])
 - multi login chat broadcast bug
 - when i chatting with someone, i am still receive notification bug
-- chat box last message date bug
 - when i wrote entry i had wrong date for my new entry bug
 - new chat conversation ui
 - mobile chat ui looks like shitty
@@ -58,7 +57,6 @@ $ npm test
 - maybe amp (with progressive web app)
 - report topic and entry system
 - when i search a did not exist topic when i am not logged-in -> empty page (bug)
-- reserved username ( check https://github.com/shouldbee/reserved-usernames )
 - auto scale
 - fix domain config with nginx
 - websocket port problem fix (maybe websocket balancer?)
@@ -74,7 +72,6 @@ $ npm test
 - docker-ize :)
 - github hooks (do not remember!)
 - varnish
-- chat text area trick must be remove
 - check fucking tab views (jquery ui?)
 - mobile browsers did not support user timing api
 - global error management
