@@ -16,54 +16,59 @@ define(function (require, exports, module) {
   var SearchView = require('../views/search');
   var DeveloperView = require('../views/developer');
 
+  var cache = require('cache');
+  var appView = cache.appView;
+  var renderPage = appView.renderPage.bind(appView);
+
   module.exports = {
-    'register': function () {
-      return new RegisterView();
+    'register': function (req) {
+      renderPage(new RegisterView());
     },
-    'error': function () {
-      return new ErrorView();
+    'error': function (req) {
+      $('meta[name="prerender-status-code"]').attr('content', 404);
+      renderPage(new ErrorView(), ['404', 'NOT FOUND']);
     },
-    'home': function () {
-      return new HomeView();
+    'home': function (req) {
+      renderPage(new HomeView());
     },
-    'topic': function () {
-      return new TopicView();
+    'topic': function (req) {
+      renderPage(new TopicView(), req.params);
     },
-    'login': function () {
-      return new LoginView();
+    'login': function (req) {
+      renderPage(new LoginView());
     },
-    'logout': function () {
-      return new LogoutView();
+    'logout': function (req) {
+      renderPage(new LogoutView());
     },
-    'today': function () {
-      return new TodayView();
+    'today': function (req) {
+      renderPage(new TodayView());
     },
-    'profile': function () {
-      return new ProfileView();
+    'profile': function (req) {
+      renderPage(new ProfileView(), req.params);
     },
-    'settings': function () {
-      return new SettingsView();
+    'settings': function (req) {
+      renderPage(new SettingsView());
     },
-    'inbox': function () {
-      return new InboxView();
+    'inbox': function (req) {
+      renderPage(new InboxView());
     },
-    'chat': function () {
-      return new ChatView();
+    'chat': function (req) {
+      renderPage(new ChatView(), req.params);
     },
-    'entry': function () {
-      return new EntryView();
+    'entry': function (req) {
+      renderPage(new EntryView(), req.params);
     },
-    'q': function () {
-      return new QView();
+    'q': function (req) {
+      renderPage(new QView(), req.params);
     },
-    'search': function () {
-      return new SearchView();
+    'search': function (req) {
+      renderPage(new SearchView());
     },
-    'entry-edit': function () {
-      return new EntryEditView();
+    'entryEdit': function (req) {
+      renderPage(new EntryEditView(), req.params);
     },
-    'developer': function () {
-      return new DeveloperView();
+    'developer': function (req) {
+      renderPage(new DeveloperView());
     }
   };
 });

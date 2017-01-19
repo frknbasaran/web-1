@@ -14,7 +14,7 @@ define(function (require, exports, module) {
   };
 
   module.exports = {
-    isNotSecure: function (req, next) {
+    'isNotSecure': function (req, next) {
       UserController['check-token']({}, function (message) {
         if (message) {
           login();
@@ -25,7 +25,7 @@ define(function (require, exports, module) {
         }
       });
     },
-    isSecure: function (req, next) {
+    'isSecure': function (req, next) {
       UserController['check-token']({}, function (message) {
         if (message) {
           login();
@@ -37,7 +37,7 @@ define(function (require, exports, module) {
         }
       });
     },
-    isVoid: function (req, next) {
+    'isVoid': function (req, next) {
       UserController['check-token']({}, function (message) {
         if (message) {
           login();

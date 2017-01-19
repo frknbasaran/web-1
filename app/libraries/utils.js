@@ -200,6 +200,10 @@ define(function (require, exports, module) {
         }
       });
     },
+    metaSuccess: function (req, next) {
+      $('meta[name="prerender-status-code"]').attr('content', 200);
+      next();
+    },
     yildiz: function (str) {
       return str.replace(/`:([^`]+)`/g, function (a, t) {
         return '<a title="(bkz: ' + t + ')" href="/q/' + t + '">*</a>';
