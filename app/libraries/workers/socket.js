@@ -28,7 +28,7 @@ var error = function (e) {
 };
 
 var initSocket = function (data) {
-  socket = new WebSocket('ws://localhost:8080' + '/' + data.token);
+  socket = new WebSocket('ws://' + location.hostname + ':8080' + '/' + data.token);
   socket.onopen = open;
   socket.onclose = close;
   socket.onmessage = message;
