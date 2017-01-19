@@ -28,7 +28,10 @@ var error = function (e) {
 };
 
 var initSocket = function (data) {
-  socket = new WebSocket('ws://' + location.hostname + ':8080' + '/' + data.token);
+  var uri = 'ws:' +
+    location.origin.split(':').slice(1, 2).toString() +
+    ':8080' + '/' + data.token;
+  socket = new WebSocket(uri);
   socket.onopen = open;
   socket.onclose = close;
   socket.onmessage = message;
