@@ -67,7 +67,6 @@ $ npm test
 - cloud flare?
 - bug snag?
 - apply promises for whole async mechanic (maybe proxies? but check supported browsers)
-- remove fucking PageController or router functions
 - apply base view model for generic methods
 - docker-ize :)
 - github hooks (do not remember!)
