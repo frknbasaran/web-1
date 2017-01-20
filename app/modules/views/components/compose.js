@@ -7,6 +7,7 @@ define(function (require, exports, module) {
   var utils = require('utils');
   var storage = require('storage');
   var cache = require('cache');
+  var notification = require('notification');
 
   module.exports = Backbone.View.extend({
     template: ComposeTemplate,
@@ -87,12 +88,12 @@ define(function (require, exports, module) {
             downvotes_count: 0
           }));
 
-          utils.doNoty('success', 'vayyy, okuyo musunuz kaça gidiyosunuz?');
+          notification.info('vayyy, okuyo musunuz kaça gidiyosunuz?');
           $('#new_entry').val('');
           cache.trigger('reload-left');
         }).bind(this));
       } else {
-        utils.doNoty('error', 'yakışmadı');
+        notification.error('yakışmadı');
       }
     },
 

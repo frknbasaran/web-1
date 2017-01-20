@@ -5,15 +5,7 @@ define(function (require, exports, module) {
   var storage = require('storage');
   var alertify = require('alertify');
   var slugify = require('slug');
-
-  var doNoty = function (type, message, callback) {
-    alertify.logPosition('bottom right');
-    if (callback) {
-      alertify[type](message, callback);
-    } else {
-      alertify[type](message);
-    }
-  };
+  var notification = require('notification');
 
   module.exports = {
     historyTrick: function () {
@@ -41,7 +33,7 @@ define(function (require, exports, module) {
 
       options.error = function (xhr, status, error) {
         NProgress.done();
-        doNoty('error', xhr.status === 0 ? 'server gone :(' : 'fuck, we forgot something :(');
+        notification.error(xhr.status === 0 ? 'server gone :(' : 'fuck, we forgot something :(');
       };
 
       options.success = function (collection, response, xhr) {
@@ -50,10 +42,10 @@ define(function (require, exports, module) {
           var msg = arguments[1].message;
           if ($.isArray(msg)) {
             for (var i in msg) {
-              doNoty('error', msg[i]);
+              notification.error(msg[i]);
             }
           } else {
-            doNoty('error', msg);
+            notification.error(msg);
           }
         } else {
           _s.apply(this, arguments);
@@ -79,7 +71,7 @@ define(function (require, exports, module) {
 
         options.error = function (xhr, status, error) {
           NProgress.done();
-          doNoty('error', xhr.status === 0 ? 'server gone :(' : 'fuck, we forgot something :(');
+          notification.error(xhr.status === 0 ? 'server gone :(' : 'fuck, we forgot something :(');
         };
 
         options.success = function () {
@@ -88,10 +80,10 @@ define(function (require, exports, module) {
             var msg = arguments[0].message;
             if ($.isArray(msg)) {
               for (var i in msg) {
-                doNoty('error', msg[i]);
+                notification.error(msg[i]);
               }
             } else {
-              doNoty('error', msg);
+              notification.error(msg);
             }
           } else {
             _s.apply(this, arguments);
@@ -116,7 +108,7 @@ define(function (require, exports, module) {
     },
     defineGlobalErrorHandler: function () {
       window.onerror = function (message, url, line) {
-        doNoty('error', message);
+        notification.error(message);
 
         console.log({
           error: message,
@@ -127,7 +119,6 @@ define(function (require, exports, module) {
         return false;
       };
     },
-    doNoty: doNoty,
     insertAtCaret: function (areaId, text) {
       var txtarea = document.getElementById(areaId);
       if (!txtarea) {

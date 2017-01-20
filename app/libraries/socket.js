@@ -4,6 +4,7 @@ define(function (require, exports, module) {
   var utils = require('utils');
   var cache = require('cache');
   var app = require('app');
+  var notification = require('notification');
   var isRunning = false;
   var socket = null;
   var getApp = function () {
@@ -14,7 +15,7 @@ define(function (require, exports, module) {
     if (res.action === 'receive_message') {
       var data = res.data;
       cache.trigger('message_received', data);
-      utils.doNoty('success', '[' + data.from + '] ' + data.message, function () {
+      notification.info('[' + data.from + '] ' + data.message, function () {
         getApp().router.navigate('/mesaj/' + data.from, true);
       });
     }

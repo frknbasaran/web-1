@@ -4,6 +4,7 @@ define(function (require, exports, module) {
   var GitHubCollection = Backbone.Collection.extend({});
   var utils = require('utils');
   var moment = require('moment');
+  var notification = require('notification');
 
   var doMomentForMeta = function (meta) {
     return moment(parseInt(meta['X-RateLimit-Reset']) * 1000).fromNow();
@@ -21,7 +22,7 @@ define(function (require, exports, module) {
         data: $.param({page: page}),
         success: function (response) {
           if (!parseInt(response.meta['X-RateLimit-Remaining'])) {
-            utils.doNoty('error', 'web # ' + doMomentForMeta(response.meta));
+            notification.error('web # ' + doMomentForMeta(response.meta));
           } else {
             callback(new GitHubCollection(response.data));
           }
@@ -39,7 +40,7 @@ define(function (require, exports, module) {
         data: $.param({page: page}),
         success: function (response) {
           if (!parseInt(response.meta['X-RateLimit-Remaining'])) {
-            utils.doNoty('error', 'api # ' + doMomentForMeta(response.meta));
+            notification.error('api # ' + doMomentForMeta(response.meta));
           } else {
             callback(new GitHubCollection(response.data));
           }

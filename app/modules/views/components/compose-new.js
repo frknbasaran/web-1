@@ -6,6 +6,7 @@ define(function (require, exports, module) {
   var utils = require('utils');
   var cache = require('cache');
   var app = require('app');
+  var notification = require('notification');
 
   module.exports = Compose.extend({
     template: ComposeTemplate,
@@ -24,7 +25,7 @@ define(function (require, exports, module) {
           app.router.navigate('/entry/' + id, true);
         });
       } else {
-        utils.doNoty('error', 'yakışmadı');
+        notification.error('yakışmadı');
       }
     },
 

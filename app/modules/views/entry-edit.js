@@ -9,6 +9,7 @@ define(function (require, exports, module) {
   var cache = require('cache');
   var moment = require('moment');
   var app = require('app');
+  var notification = require('notification');
 
   module.exports = Backbone.View.extend({
     events: {},
@@ -22,7 +23,7 @@ define(function (require, exports, module) {
       entryController.getEntryById(id, (function (entry) {
         if (storage.id !== entry.get('user').id) {
           app.router.navigate('/entry/' + entry.get('id'), true);
-          utils.doNoty('success', 'taklitçi olma kendin ol biraz');
+          notification.info('taklitçi olma kendin ol biraz');
           return;
         }
 

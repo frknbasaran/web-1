@@ -7,6 +7,7 @@ define(function (require, exports, module) {
   var utils = require('utils');
   var storage = require('storage');
   var UserController = require('../controllers/user');
+  var notification = require('notification');
 
   module.exports = Backbone.View.extend({
     title: 'kalkan gemi',
@@ -25,7 +26,7 @@ define(function (require, exports, module) {
         storage.remove('email');
         storage.remove('slug');
         cache.trigger('auth-false');
-        utils.doNoty('success', 'sad but true :<');
+        notification.info('sad but true :<');
         app.router.navigate('/giris', true);
       });
     }

@@ -7,6 +7,7 @@ define(function (require, exports, module) {
   var utils = require('utils');
   var storage = require('storage');
   var userController = require('../controllers/user');
+  var notification = require('notification');
 
   module.exports = Backbone.View.extend({
     title: 'giriş',
@@ -45,7 +46,7 @@ define(function (require, exports, module) {
         storage.username = data.username;
         storage.slug = data.slug;
         cache.trigger('auth-true');
-        utils.doNoty('success', 'yaaa şapşik ♥');
+        notification.info('yaaa şapşik ♥');
         if (!!cache.lastTry) {
           var target = cache.lastTry;
           delete cache.lastTry;

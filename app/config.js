@@ -11,6 +11,7 @@ require.config({
     'app': './app',
     'utils': './libraries/utils',
     'cache': './libraries/cache',
+    'notification': './libraries/notification',
     'moment': '../deps/moment/min/moment-with-locales.min',
     'boss': './libraries/boss',
     'favicon': '../deps/favico.js/favico-0.3.10.min',

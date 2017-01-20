@@ -10,6 +10,7 @@ define(function (require, exports, module) {
   var userController = require('../controllers/user');
   var utils = require('utils');
   var storage = require('storage');
+  var notification = require('notification');
 
   var MessageItemView = Backbone.View.extend({
     template: ChatMessageItemTemplate,
@@ -92,7 +93,7 @@ define(function (require, exports, module) {
           self.goBottomOfChat();
 
           if (!socket.status) {
-            utils.doNoty('error', 'mesajlaşma servisi çıktı, not alıyım istersen?');
+            notification.error('mesajlaşma servisi çıktı, not alıyım istersen?');
           } else {
             $('#message').prop('disabled', false);
             $('#ok').prop('disabled', false);

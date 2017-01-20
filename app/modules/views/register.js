@@ -7,6 +7,7 @@ define(function (require, exports, module) {
   var utils = require('utils');
   var storage = require('storage');
   var userController = require('../controllers/user');
+  var notification = require('notification');
 
   module.exports = Backbone.View.extend({
     title: 'kaydol',
@@ -32,7 +33,7 @@ define(function (require, exports, module) {
         storage.username = data.username;
         storage.slug = data.slug;
         cache.trigger('auth-true');
-        utils.doNoty('success', 'gel gel sen de gel');
+        notification.info('gel gel sen de gel');
         app.router.navigate('/', true);
       });
     },

@@ -9,6 +9,7 @@ define(function (require, exports, module) {
   var utils = require('utils');
   var cache = require('cache');
   var app = require('app');
+  var notification = require('notification');
 
   module.exports = Backbone.View.extend({
     template: EntryItemTemplate,
@@ -64,7 +65,7 @@ define(function (require, exports, module) {
     selfDestroy: function () {
       this.model.destroy({
         success: (function () {
-          utils.doNoty('success', 'ne kadar güzeldi o günler');
+          notification.info('ne kadar güzeldi o günler');
           cache.trigger('reload-left');
           if (this.single) {
             var topic = this.model.get('topic');
