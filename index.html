@@ -12,11 +12,6 @@
     <meta name="google-site-verification" content="02-KL8JV8h1wo23Rc77kjtovgSMERJ8qiBCbOWJ5RvU"/>
     <meta name="fragment" content="!">
     <meta name="prerender-status-code" content="200">
-    <noscript>
-        <!-- build:[href] /styles.min.css -->
-        <link rel="stylesheet" href="app/styles/index.css">
-        <!-- /build -->
-    </noscript>
     <!-- build:[content] true -->
     <meta name="production" content="false">
     <!-- /build -->
@@ -26,8 +21,9 @@
 </head>
 <body>
 <!-- build:[src] /source.min.js -->
-<script src="deps/requirejs/require.js" data-main="app/config" id="app-js" defer></script>
+<script src="deps/requirejs/require.js" data-main="app/config" id="app-js" async></script>
 <!-- /build -->
+<script src="https://use.fontawesome.com/e4f4248f35.js" async></script>
 <script>
   var link = document.createElement('link');
   link.rel = 'stylesheet';
