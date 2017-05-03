@@ -17,6 +17,11 @@ module.exports = function () {
         middleware: function (connect, options, middlewares) {
           middlewares.unshift(pushState());
           middlewares.unshift(compression());
+          middlewares.unshift(function (req, res, next) {
+            // 1 month
+            res['setHeader']('Expires', new Date(Date.now() + 2592000000).toUTCString());
+            next();
+          });
           return middlewares;
         }
       }
