@@ -11,7 +11,7 @@ module.exports = function () {
           path: 'dist',
           options: {
             index: 'index.html',
-            maxAge: 300000
+            maxAge: 2592000000
           }
         },
         middleware: function (connect, options, middlewares) {
