@@ -12,18 +12,31 @@
     <meta name="google-site-verification" content="02-KL8JV8h1wo23Rc77kjtovgSMERJ8qiBCbOWJ5RvU"/>
     <meta name="fragment" content="!">
     <meta name="prerender-status-code" content="200">
-    <!-- build:[value] true -->
-    <meta name="production" value="false">
+    <noscript>
+        <!-- build:[href] /styles.min.css -->
+        <link rel="stylesheet" href="app/styles/index.css">
+        <!-- /build -->
+    </noscript>
+    <!-- build:[content] true -->
+    <meta name="production" content="false">
     <!-- /build -->
-    <!-- build:[href] /styles.min.css -->
-    <link rel="stylesheet" href="app/styles/index.css">
+    <!-- build:[content] /styles.min.css -->
+    <meta name="css" content="app/styles/index.css">
     <!-- /build -->
 </head>
 <body>
 <!-- build:[src] /source.min.js -->
-<script src="deps/requirejs/require.js" data-main="app/config" id="app-js"></script>
+<script src="deps/requirejs/require.js" data-main="app/config" id="app-js" defer></script>
 <!-- /build -->
-</body>
+<script>
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = document.getElementsByTagName('meta')[10].content;
+  link.type = 'text/css';
+
+  var el = document.getElementsByTagName('link')[0];
+  el.parentNode.insertBefore(link, el);
+</script>
 <script>
   (function (i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r;
@@ -39,6 +52,6 @@
 
   ga('create', 'UA-68750372-3', 'auto');
   ga('send', 'pageview');
-
 </script>
+</body>
 </html>

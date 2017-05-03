@@ -1,6 +1,6 @@
 require(['extends', 'backbone', 'app', 'libraries/router'],
   function (_extends, Backbone, app, Router) {
-    var isProduction = $('meta[name="production"]').attr('value');
+    var isProduction = $('meta[name="production"]').attr('content');
 
     app.router = new Router();
 
