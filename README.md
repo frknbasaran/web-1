@@ -74,7 +74,10 @@ $ npm test
 - check fucking tab views (jquery ui?)
 - mobile browsers did not support user timing api
 - global error management
-- mail notification for unreal chat messages
+- mail notification for unread chat messages
+- update bower deps
+- replace jquery to zepto (perf)
+- use prepack
 #
 # SORRY FOR SHITTY ENGLISH, HERE'S A POTATO
 #
