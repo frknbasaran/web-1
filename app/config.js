@@ -50,11 +50,11 @@ require.config({
 
   config: {
     'modules/models/base': {
-      apiUrl: 'http://127.0.0.1:8081/api/v1',
+      apiUrl: 'http://127.0.0.1:6060/api/v1',
       mockUrl: '/fake-api'
     },
     'modules/collections/base': {
-      apiUrl: 'http://127.0.0.1:8081/api/v1',
+      apiUrl: 'http://127.0.0.1:6060/api/v1',
       mockUrl: '/fake-api'
     },
     'modules/controllers/topic': {
