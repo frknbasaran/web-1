@@ -6,7 +6,7 @@ module.exports = function () {
   return this.config('connect', {
     server: {
       options: {
-        port: 1337,
+        port: 80,
         base: {
           path: 'dist',
           options: {
